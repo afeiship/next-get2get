@@ -9,9 +9,7 @@
       var path = inPaths[i];
       res = nx.get(inTarget, path);
       if (typeof res !== 'undefined') return res;
-      if (i === len - 1) {
-        return inValue;
-      }
+      if (i === len - 1) return inValue;
     }
     return res;
   };
