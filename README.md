@@ -15,7 +15,18 @@ npm install -S @jswork/next-get2get
 ```js
 import '@jswork/next-get2get';
 
-//DOCS here!
+const e1 = { target: { value: '121' } };
+const e2 = { detail: { value: '122' } };
+const e3 = 123;
+const paths = ['target.value', 'detail.value'];
+
+const res1 = nx.get2get(e1, paths, 'event-value');
+const res2 = nx.get2get(e2, paths, 'event-value');
+const res3 = nx.get2get(e3, paths, 'event-value');
+
+// '121'
+// '122'
+// 'event-value'
 ```
 
 ## license
