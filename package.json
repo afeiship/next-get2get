@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-get2get",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get paths one by one.",
   "homepage": "https://github.com/afeiship/next-get2get",
   "author": {
@@ -39,5 +39,12 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "keywords": [
+    "next",
+    "get",
+    "paths",
+    "event",
+    "value"
+  ]
 }
