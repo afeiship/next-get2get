@@ -12,7 +12,7 @@ nx.get2get = function (inTarget, inPaths, inValue) {
   return res;
 };
 
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== 'undefined' && module.exports && typeof wx === 'undefined') {
   module.exports = nx.get2get;
 }
 
