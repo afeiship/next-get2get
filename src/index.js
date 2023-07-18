@@ -1,9 +1,7 @@
 import nx from '@jswork/next';
 
 const defaults = {
-  isEmpty: function (v) {
-    return typeof v === 'undefined';
-  }
+  isEmpty: (v) => typeof v === 'undefined'
 };
 
 nx.get2get = function (inTarget, inPaths, inValue, inOptions) {
