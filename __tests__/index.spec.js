@@ -24,7 +24,7 @@ describe('api.basic test', () => {
     expect(formValue(e3)).toBe(123);
   });
 
-  test.only('get empty str, use customize emptyFn', () => {
+  test('get empty str, use customize emptyFn', () => {
     const student = {
       avatarName: '',
       chineseName: '',
