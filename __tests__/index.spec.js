@@ -23,4 +23,24 @@ describe('api.basic test', () => {
     expect(formValue(e2)).toBe('122');
     expect(formValue(e3)).toBe(123);
   });
+
+  test.only('get empty str, use customize emptyFn', () => {
+    const student = {
+      avatarName: '',
+      chineseName: '',
+      englishName: '',
+      gender: 'L',
+      guideFinished: false,
+      id: 12635818,
+      mobile: '13817908718',
+      passportId: '25495287',
+      state: 'default',
+      studentName: '138****8718'
+    };
+    var isEmpty = (v) => v === '' || v === undefined;
+    var res = nx.get2get(student, ['chineseName', 'englishName', 'studentName'], '未设置', {
+      isEmpty
+    });
+    expect(res).toBe('138****8718');
+  });
 });

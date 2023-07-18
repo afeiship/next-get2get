@@ -1,12 +1,20 @@
 import nx from '@jswork/next';
 
-nx.get2get = function (inTarget, inPaths, inValue) {
+const defaults = {
+  isEmpty: function (v) {
+    return typeof v === 'undefined';
+  }
+};
+
+nx.get2get = function (inTarget, inPaths, inValue, inOptions) {
   var res;
   var len = inPaths.length;
+  var opts = nx.mix(null, defaults, inOptions);
+
   for (var i = 0; i < len; i++) {
     var path = inPaths[i];
     res = nx.get(inTarget, path);
-    if (typeof res !== 'undefined') return res;
+    if (!opts.isEmpty(res)) return res;
     if (i === len - 1) return inValue;
   }
   return res;
